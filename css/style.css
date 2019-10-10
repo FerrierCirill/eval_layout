@@ -1,0 +1,98 @@
+/* ------------------------------------ */
+    /* Global */
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    /* -- Elements */
+
+        .txtcenter {
+            text-align: center;
+        }
+
+
+/* ------------------------------------ */
+    /*  Mobille First  */
+
+    /* -- Titre */
+
+        .desktopG   { display: none; }
+        .desktop    { display: none; }
+        .tablette   { display: none; }
+        .telephone  { display: block;}
+   
+    /*  -- Container and row */
+
+        .container {
+            width: 100%;
+            padding: 0px 10px;
+        }
+
+        .col {
+            width: 100%;
+        }
+
+/* ------------------------------------ */
+    /* Media Querie */
+
+    /* -- Tablette */
+
+        @media only screen and (min-width: 720px) {
+            .container{
+                display: table;
+            }
+            
+            .col {
+                display: inline-block;
+                width: 50%;
+                padding: 5px;
+            }
+
+
+            /* -- Titre */
+
+                .tablette   { display: block;}
+                .telephone  { display: none; }
+        }
+
+    /* -- Petit ecran */
+
+        @media only screen and (min-width: 1080px) {
+            .container {
+                width: 1080px;
+                margin: 0 auto;
+            }
+
+
+            /* -- Titre */
+
+                .desktop    { display: block;}
+                .tablette   { display: none; }
+                .telephone  { display: none; }
+        }
+
+    /* -- Grand ecrand */
+
+        @media only screen and (min-width: 1400px) {
+            .container {
+                width: 1300px;
+            }
+
+            .col {
+                display: inline-block;
+                width: 25%;
+            }
+
+
+            /* -- Titre */
+
+                .desktopG   { display: block;}
+                .desktop    { display: none; }
+        }
